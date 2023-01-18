@@ -1,0 +1,11 @@
+The Publisher publishes changes made on some tables (articles) by sending the updates to the Distributor. The publisher can be an Azure SQL Managed Instance or a SQL Server instance.
+
+The Distributor collects changes in the articles from a Publisher and distributes them to the Subscribers. The Distributor can be either a Azure SQL Managed Instance or a SQL Server instance (any version as long it is equal to or higher than the Publisher version).
+
+The Subscriber receives changes made on the Publisher. A SQL Server instance and Azure SQL Managed Instance can both be push and pull subscribers, though a pull subscription is not supported when the distributor is an Azure SQL Managed Instance and the subscriber is not. A database in Azure SQL Database can only be a push subscriber.
+
+Azure SQL Managed Instance can support being a Subscriber from the following versions of SQL Server:
+
+SQL Server 2016 and later
+
+SQL Server 2014 RTM CU10 (12.0
